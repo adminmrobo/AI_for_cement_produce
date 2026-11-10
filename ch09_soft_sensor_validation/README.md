@@ -31,4 +31,4 @@ ch09_soft_sensor_validation/
 └── docs/IMG_soft_sensor.md   Genspark 그림 지시문 (표지 + 7장)
 ```
 
-실습 데이터와 수정본 가이드는 `../ch08_timeseries_lag_preprocessing/data/`, `../ch08_timeseries_lag_preprocessing/docs/`에 있습니다.
+실습 가이드 페이지·노트북·데이터는 `../ch08_timeseries_lag_preprocessing/`에 있습니다 (`practice_guide.html`, `practice_guide.ipynb`, `data/`).

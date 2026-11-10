@@ -26,6 +26,8 @@
 ch08_timeseries_lag_preprocessing/
 ├── index.html                       이 장 목록 페이지
 ├── process_lag.html                 해설 페이지 (단일 파일, 실습 데이터 내장)
+├── practice_guide.html              실습 가이드 페이지 (셀 복사 버튼 · 내려받기 · Colab 열기)
+├── practice_guide.ipynb             실습 노트북 (Colab에서 바로 열림, 데이터는 주소로 읽음)
 ├── data/cement-practice-data.csv    실습 데이터 (가상, 4,320줄)
 ├── img/                             표지와 본문 그림 자리 (그림 받으면 넣기)
 └── docs/

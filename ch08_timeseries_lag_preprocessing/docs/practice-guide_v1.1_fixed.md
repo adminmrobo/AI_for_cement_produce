@@ -10,7 +10,7 @@
 
 | 항목 | 설명 |
 |---|---|
-| `cement-practice-data.csv` | 이 폴더에 있는 실습 데이터 파일. 이름이 달라도 괜찮습니다 — 아래 코드는 업로드한 파일 이름을 자동으로 찾습니다 |
+| `cement-practice-data.csv` | 실습 데이터 파일. 셀 2가 강의 사이트에서 바로 읽으므로 따로 받지 않아도 됩니다(인터넷이 막히면 내려받아 셀 2-B로 업로드) |
 | Google Colab | colab.research.google.com 접속 후 새 노트북 생성 |
 
 ### 데이터에 무엇이 들어 있나 (변수 사전)
@@ -31,7 +31,7 @@
 
 ---
 
-## 2. 시작: 라이브러리 설치와 데이터 업로드
+## 2. 시작: 라이브러리와 데이터 불러오기
 
 **셀 1 — 라이브러리**
 
@@ -44,10 +44,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 ```
 
-**셀 2 — CSV 업로드**
+**셀 2 — 데이터 불러오기 (주소로 바로)**
 
-Colab 좌측의 📎(클립보드) 아이콘을 눌러 `cement-practice-data.csv`를 올립니다.
-아래 코드는 **어떤 파일 이름으로 올려도** 자동으로 찾습니다.
+업로드할 필요 없이 강의 사이트에서 바로 읽어 옵니다.
+
+```python
+DATA_URL = "https://adminmrobo.github.io/AI_for_cement_produce/ch08_timeseries_lag_preprocessing/data/cement-practice-data.csv"
+df = pd.read_csv(DATA_URL)
+print(df.shape)   # (4320, 6) 이 나오면 성공
+df.head()
+```
+
+**셀 2-B — 인터넷이 막혔을 때만: 파일 올리기**
+
+위 셀이 오류를 내면, 강의 사이트의 「데이터 내려받기」로 CSV를 받은 뒤 이 셀을 실행해 올립니다.
+**어떤 파일 이름으로 올려도** 자동으로 찾습니다.
 
 ```python
 from google.colab import files
@@ -62,8 +73,7 @@ print(df.shape)
 df.head()
 ```
 
-> 💡 로컬(컴퓨터)에서 jupyter로 돌리는 경우라면 `files.upload()` 대신
-> `df = pd.read_csv("내_파일명.csv")`로 바꾸면 됩니다.
+> 💡 로컬(컴퓨터)에서 jupyter로 돌리는 경우라면 `df = pd.read_csv("내_파일명.csv")`로 바꾸면 됩니다.
 
 ---
 
@@ -330,6 +340,7 @@ plt.show()
 | 셀 | v1.0 | v1.1 | 결과 차이 |
 |---|---|---|---|
 | 6 | 품질 줄만 고른 표 `q`에서 `shift(L)` → 1줄 = 15분이라 `shift(37)` = 555분 | 1분 표 `df`에서 `shift(L)` 한 뒤 품질 줄 위치(`q.index`)만 골라 상관 | 37분 상관 0.048 → 0.998 |
+| 2 | Colab에 파일 업로드 | 강의 사이트 주소에서 바로 읽기(업로드는 대안 셀 2-B로) | 업로드 단계 생략 |
 | 13 | `train_rows.loc[cut, "time"]` — 이름표 210 = 3월 2일 03:30 | `train_rows["time"].iloc[cut]` — 210번째 줄 = 3월 4일 08:15 | 학습 6줄 · 시험 253줄 · MAE 2.348 → 학습 206줄 · 시험 53줄 · MAE 0.262 |
 
 재실행 참고값(scikit-learn, 같은 설정): 무작위 분할 MAE 0.314(시험 53줄), 시간순 + 60분 gap MAE 0.262(시험 53줄), 학습용 행 263개(제외 6개).
