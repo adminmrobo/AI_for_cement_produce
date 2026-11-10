@@ -1,5 +1,5 @@
-> **AI를 활용한 시멘트 공정 최적화 · ch06 (6주) 비용함수 설계와 제약조건 하 최적화** — [강의 전체 목차](https://adminmrobo.github.io/ai_for_cement_produce/)  
-> **▶ 바로 보기:** https://adminmrobo.github.io/ai_for_cement_produce/ch06_cost_function_optimization/
+> **AI를 활용한 시멘트 공정 최적화 · ch06 (6주) 비용함수 설계와 제약조건 하 최적화** — [강의 전체 목차](https://adminmrobo.github.io/AI_for_cement_produce/)  
+> **▶ 바로 보기:** https://adminmrobo.github.io/AI_for_cement_produce/ch06_cost_function_optimization/
 
 # 시멘트 공정 AI 해설
 
@@ -59,7 +59,7 @@ ch06_cost_function_optimization/
 
 ## 게시
 
-이 장은 통합 저장소 [ai_for_cement_produce](https://github.com/adminmrobo/ai_for_cement_produce)의 `ch06_cost_function_optimization/` 폴더로 게시됩니다. 주소: https://adminmrobo.github.io/ai_for_cement_produce/ch06_cost_function_optimization/ (옛 저장소 `ai_for_cement_produce_08`에서 옮김, 2026-11-10)
+이 장은 통합 저장소 [AI_for_cement_produce](https://github.com/adminmrobo/AI_for_cement_produce)의 `ch06_cost_function_optimization/` 폴더로 게시됩니다. 주소: https://adminmrobo.github.io/AI_for_cement_produce/ch06_cost_function_optimization/ (옛 저장소 `ai_for_cement_produce_08`에서 옮김, 2026-11-10)
 
 페이지는 서버 없이 파일을 더블클릭해도 열립니다. 외부 요청은 글꼴(Google Fonts) 하나뿐이고, 브라우저 저장소를 쓰지 않습니다.
 

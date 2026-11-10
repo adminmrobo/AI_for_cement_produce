@@ -2,7 +2,7 @@
 
 시멘트 공장의 데이터로 품질을 미리 맞히고, 그 답을 믿어도 되는지 따지고, 단가를 붙여 가장 알맞은 운전을 찾는 강의의 주차별 인터랙티브 해설 페이지입니다. 박사·조수(하루)·초파리 연구원·주판봇이 진행합니다.
 
-**▶ 바로 보기:** https://adminmrobo.github.io/ai_for_cement_produce/
+**▶ 바로 보기:** https://adminmrobo.github.io/AI_for_cement_produce/
 
 글 · 안상선 ((주)M-Robo 대표) · Ahn Sangsun
 
@@ -14,8 +14,8 @@
 | 2주 | 분석 환경 구축과 생성형 AI 활용 기초 | 도구 준비와 에러 대처 | 클라우드 실행 환경의 구조 · 오류 유형별 대처 절차 · 생성형 AI를 이용한 디버깅 | 준비 중 |
 | 3주 | 지도학습 회귀 모델의 이해와 적용 | 첫 예측 모델 | 입력·출력 변수 정의 · 부스팅 트리 회귀 · 성능 지표(RMSE, R²) 해석 | 준비 중 |
 | 4주 | 데이터 분할·과적합과 모델 검증 방법론 | 이걸 믿어도 되나 | 학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가 | 준비 중 |
-| 5주 | 설명가능 AI를 활용한 변수 중요도 분석 | 무엇이 강도를 정하나 | SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A | [ch05](https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/) |
-| 6주 | 비용함수 설계와 제약조건 하 최적화 | 값을 붙이면 답이 달라진다 | 목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색 | [ch06](https://adminmrobo.github.io/ai_for_cement_produce/ch06_cost_function_optimization/) |
+| 5주 | 설명가능 AI를 활용한 변수 중요도 분석 | 무엇이 강도를 정하나 | SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A | [ch05](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/) |
+| 6주 | 비용함수 설계와 제약조건 하 최적화 | 값을 붙이면 답이 달라진다 | 목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색 | [ch06](https://adminmrobo.github.io/AI_for_cement_produce/ch06_cost_function_optimization/) |
 | 7주 | **중간점검** | | | — |
 | 8주 | 공정 시계열 데이터의 시차 구조와 전처리 | 결과가 늦게 나오는 문제 | 표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별 | 준비 중 |
 | 9주 | 소프트센서 구현과 시계열 검증 설계 | 품질 예측 모델 만들기 | 시차 변수 생성 · 정지 구간 제외 · 시간 순서 분할 대 무작위 분할 비교 | 준비 중 |
@@ -37,7 +37,7 @@
 
 ## 게시
 
-Settings → Pages → Branch `main` / `/(root)`로 두면 https://adminmrobo.github.io/ai_for_cement_produce/ 에서 열립니다.
+Settings → Pages → Branch `main` / `/(root)`로 두면 https://adminmrobo.github.io/AI_for_cement_produce/ 에서 열립니다.
 
 ## 저작권
 

@@ -1,4 +1,4 @@
-> **AI를 활용한 시멘트 공정 최적화 · ch05 (5주) 설명가능 AI를 활용한 변수 중요도 분석** — [강의 전체 목차](https://adminmrobo.github.io/ai_for_cement_produce/)
+> **AI를 활용한 시멘트 공정 최적화 · ch05 (5주) 설명가능 AI를 활용한 변수 중요도 분석** — [강의 전체 목차](https://adminmrobo.github.io/AI_for_cement_produce/)
 
 # 시멘트 품질, AI로 미리 본다
 
@@ -6,7 +6,7 @@
 
 회귀·분류 모델로 시멘트 **28일 압축강도**와 **불량**을 예측하는 4단계 실습입니다. 생성 AI에 프롬프트를 주고, 받은 코드를 Google Colab에서 실행하고, 결과를 공정 엔지니어의 눈으로 읽습니다. 박사 · 조수 · 초파리 연구원 · 주판봇이 진행하는 연구실 해설 대시보드 형식입니다.
 
-**▶ 바로 보기:** https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/
+**▶ 바로 보기:** https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/
 
 글 · 안상선 ((주)M-Robo 대표)
 
@@ -26,11 +26,11 @@
 
 | 단계 | 질문 | 배우는 것 | 핵심 숫자 |
 |---|---|---|---|
-| [1. 첫 예측 모델](https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv1) | 28일을 기다리지 않고 강도를 알 수 있을까? | 입력·출력 변수, 부스팅 트리, RMSE·R² | RMSE 2.33 MPa, R² 0.77 |
-| [2. 이걸 믿어도 되나](https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv2) | 좋은 점수는 진짜인가? | 분할, 과적합, 데이터 누수, 그룹 분할, 분류와 임계값 | 무작위 0.86 → 새 가마 0.68 |
-| [3. 무엇이 강도를 정하나](https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv3) | 모델은 왜 그렇게 맞혔나? | SHAP 기여도, 워터폴, 파생 변수, 중요도 ≠ 인과 | 분말도·슬래그·유리석회 |
-| [4. 값을 붙이면 답이 달라진다](https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv4) | 목표 강도를 지키는 가장 싼 배합은? | 목적함수, 제약 조건, 안전 여유 | 67,400 → 63,000원/t (예시값) |
-| [대결](https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#duel) | 새 가마의 성적을 누가 정직하게 약속했나? | 평가 방식과 보고 숫자 | 초파리 승 |
+| [1. 첫 예측 모델](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv1) | 28일을 기다리지 않고 강도를 알 수 있을까? | 입력·출력 변수, 부스팅 트리, RMSE·R² | RMSE 2.33 MPa, R² 0.77 |
+| [2. 이걸 믿어도 되나](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv2) | 좋은 점수는 진짜인가? | 분할, 과적합, 데이터 누수, 그룹 분할, 분류와 임계값 | 무작위 0.86 → 새 가마 0.68 |
+| [3. 무엇이 강도를 정하나](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv3) | 모델은 왜 그렇게 맞혔나? | SHAP 기여도, 워터폴, 파생 변수, 중요도 ≠ 인과 | 분말도·슬래그·유리석회 |
+| [4. 값을 붙이면 답이 달라진다](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#lv4) | 목표 강도를 지키는 가장 싼 배합은? | 목적함수, 제약 조건, 안전 여유 | 67,400 → 63,000원/t (예시값) |
+| [대결](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/cement_quality.html#duel) | 새 가마의 성적을 누가 정직하게 약속했나? | 평가 방식과 보고 숫자 | 초파리 승 |
 
 ## 파일 구성
 
@@ -72,7 +72,7 @@ ch05_explainable_ai_importance/
 
 ## 게시
 
-이 장은 통합 저장소 [ai_for_cement_produce](https://github.com/adminmrobo/ai_for_cement_produce)의 `ch05_explainable_ai_importance/` 폴더로 게시됩니다. 주소: https://adminmrobo.github.io/ai_for_cement_produce/ch05_explainable_ai_importance/ (옛 저장소 `ai_for_cement_produce_07`에서 옮김, 2026-11-10)
+이 장은 통합 저장소 [AI_for_cement_produce](https://github.com/adminmrobo/AI_for_cement_produce)의 `ch05_explainable_ai_importance/` 폴더로 게시됩니다. 주소: https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/ (옛 저장소 `ai_for_cement_produce_07`에서 옮김, 2026-11-10)
 
 외부 라이브러리와 서버가 필요 없습니다. 외부 요청은 Google Fonts 글꼴 하나뿐이며, 글꼴을 못 받아도 시스템 글꼴로 보입니다.
 
