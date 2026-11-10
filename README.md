@@ -17,8 +17,8 @@
 | 5주 | 설명가능 AI를 활용한 변수 중요도 분석 | 무엇이 강도를 정하나 | SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A | [ch05](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/) |
 | 6주 | 비용함수 설계와 제약조건 하 최적화 | 값을 붙이면 답이 달라진다 | 목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색 | [ch06](https://adminmrobo.github.io/AI_for_cement_produce/ch06_cost_function_optimization/) |
 | 7주 | **중간점검** | | | — |
-| 8주 | 공정 시계열 데이터의 시차 구조와 전처리 | 결과가 늦게 나오는 문제 | 표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별 | 준비 중 |
-| 9주 | 소프트센서 구현과 시계열 검증 설계 | 품질 예측 모델 만들기 | 시차 변수 생성 · 정지 구간 제외 · 시간 순서 분할 대 무작위 분할 비교 | 준비 중 |
+| 8주 | 공정 시계열 데이터의 시차 구조와 전처리 | 결과가 늦게 나오는 문제 | 표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별 | [ch08](https://adminmrobo.github.io/AI_for_cement_produce/ch08_timeseries_lag_preprocessing/) |
+| 9주 | 소프트센서 구현과 시계열 검증 설계 | 품질 예측 모델 만들기 | 시차 변수 생성 · 정지 구간 제외 · 시간 순서 분할 대 무작위 분할 비교 | [ch09](https://adminmrobo.github.io/AI_for_cement_produce/ch09_soft_sensor_validation/) |
 | 10주 | 공정 변수 요인 분석과 경제성 평가 | 연료를 얼마나 줄일 수 있나 | 요인 기여도 순위 · 연료 절감 시나리오 예측 · 비용 환산 · 산업 평균 대조 · 확인 카드 C | 준비 중 |
 | 11주 | 위험 기반 의사결정과 최적 운전점 도출 | 경계선 찾기 | 불량 발생 확률 추정 · 기대손실 산출 · 절감액-손실 균형점 · 허용 위험별 권고안 | 준비 중 |
 | 12주 | 대체연료 적용의 다목적 상충 분석 | 폐자원 연료 | 대체율 구간별 생산량·품질 비교 · 공개 배출 데이터 수집 및 시각화 · 확인 카드 B | 준비 중 |
@@ -32,6 +32,8 @@
 |---|---|---|
 | `ch05_explainable_ai_importance/` | ch05 「시멘트 품질, AI로 미리 본다」 — 해설 페이지, 실습 데이터(`data/`), 그림(`img/`), 그림 명세(`docs/`) | `ai_for_cement_produce_07` |
 | `ch06_cost_function_optimization/` | ch06 「무엇이 강도를 정하고, 얼마에 만들 것인가」 — 해설 페이지, 그림(`img/`), 그림 명세(`docs/`) | `ai_for_cement_produce_08` |
+| `ch08_timeseries_lag_preprocessing/` | ch08 「온도를 바꿨는데, 품질은 왜 나중에 달라질까?」 — 비전공자판 해설, 실습 데이터(`data/`), 실습 가이드 수정본·그림 명세(`docs/`) | — |
+| `ch09_soft_sensor_validation/` | ch09 「시험 결과를 기다리지 않고 품질을 알 수 있을까?」 — 비전공자판 해설, 그림 명세(`docs/`) | — |
 
 각 장 폴더 안의 `README.md`에 그 장의 목차와 구성이 있습니다. 새 장은 `chNN_영문이름/` 폴더로 추가하고, 맨 위 `index.html`의 강의 계획 표에서 해당 주차의 "준비 중"을 링크로 바꿉니다.
 

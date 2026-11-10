@@ -105,6 +105,26 @@ table.syl td:first-child{white-space:nowrap}
       <span class="go">해설 열기 →</span>
     </div>
   </a>
+  <a class="card" href="ch08_timeseries_lag_preprocessing/">
+    <div class="thumb ph"><img class="cov" src="ch08_timeseries_lag_preprocessing/img/COVER.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div class="body">
+      <span class="chno">ch08 · 8주</span>
+      <h3>온도를 바꿨는데, 품질은 왜 나중에 달라질까?</h3>
+      <p>공정 시계열 데이터의 시차 구조와 전처리 — 1분 센서와 15분 품질을 시각으로 맞추고, 숨은 37분을 데이터에서 찾고, 정지·재가동의 그림자를 표시한다.</p>
+      <div class="chips"><span class="chip g">시각 기준 결합</span><span class="chip">결측 ≠ 0</span><span class="chip g">시차 탐색</span><span class="chip">운전 상태 · 확인 카드 B</span><span class="chip a">비전공자판</span></div>
+      <span class="go">해설 열기 →</span>
+    </div>
+  </a>
+  <a class="card" href="ch09_soft_sensor_validation/">
+    <div class="thumb ph"><img class="cov" src="ch09_soft_sensor_validation/img/COVER.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div class="body">
+      <span class="chno">ch09 · 9주</span>
+      <h3>시험 결과를 기다리지 않고 품질을 알 수 있을까?</h3>
+      <p>소프트센서 구현과 시계열 검증 설계 — 37분 전 센서값으로 품질을 추정하는 랜덤포레스트를 만들고, 무작위 분할과 시간순 + 간격 분할로 정직하게 시험한다.</p>
+      <div class="chips"><span class="chip g">시차 변수</span><span class="chip">랜덤포레스트 · MAE</span><span class="chip g">시간순 + 간격</span><span class="chip">확인 카드 C</span><span class="chip a">비전공자판</span></div>
+      <span class="go">해설 열기 →</span>
+    </div>
+  </a>
   </div>
 </div>
 </section>
@@ -122,8 +142,8 @@ table.syl td:first-child{white-space:nowrap}
       <tr class="on"><td>5주</td><td><b>설명가능 AI를 활용한 변수 중요도 분석</b></td><td>무엇이 강도를 정하나</td><td>SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A</td><td><a class="open" href="ch05_explainable_ai_importance/">ch05 열기 →</a></td></tr>
       <tr class="on"><td>6주</td><td><b>비용함수 설계와 제약조건 하 최적화</b></td><td>값을 붙이면 답이 달라진다</td><td>목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색</td><td><a class="open" href="ch06_cost_function_optimization/">ch06 열기 →</a></td></tr>
       <tr class="chk"><td>7주</td><td colspan="3"><b>중간점검</b></td><td>—</td></tr>
-      <tr><td>8주</td><td><b>공정 시계열 데이터의 시차 구조와 전처리</b></td><td>결과가 늦게 나오는 문제</td><td>표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별</td><td><span class="soon">준비 중</span></td></tr>
-      <tr><td>9주</td><td><b>소프트센서 구현과 시계열 검증 설계</b></td><td>품질 예측 모델 만들기</td><td>시차 변수 생성 · 정지 구간 제외 · 시간 순서 분할 대 무작위 분할 비교</td><td><span class="soon">준비 중</span></td></tr>
+      <tr class="on"><td>8주</td><td><b>공정 시계열 데이터의 시차 구조와 전처리</b></td><td>결과가 늦게 나오는 문제</td><td>표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별</td><td><a class="open" href="ch08_timeseries_lag_preprocessing/">ch08 열기 →</a></td></tr>
+      <tr class="on"><td>9주</td><td><b>소프트센서 구현과 시계열 검증 설계</b></td><td>품질 예측 모델 만들기</td><td>시차 변수 생성 · 정지 구간 제외 · 시간 순서 분할 대 무작위 분할 비교</td><td><a class="open" href="ch09_soft_sensor_validation/">ch09 열기 →</a></td></tr>
       <tr><td>10주</td><td><b>공정 변수 요인 분석과 경제성 평가</b></td><td>연료를 얼마나 줄일 수 있나</td><td>요인 기여도 순위 · 연료 절감 시나리오 예측 · 비용 환산 · 산업 평균 대조 · 확인 카드 C</td><td><span class="soon">준비 중</span></td></tr>
       <tr><td>11주</td><td><b>위험 기반 의사결정과 최적 운전점 도출</b></td><td>경계선 찾기</td><td>불량 발생 확률 추정 · 기대손실 산출 · 절감액-손실 균형점 · 허용 위험별 권고안</td><td><span class="soon">준비 중</span></td></tr>
       <tr><td>12주</td><td><b>대체연료 적용의 다목적 상충 분석</b></td><td>폐자원 연료</td><td>대체율 구간별 생산량·품질 비교 · 공개 배출 데이터 수집 및 시각화 · 확인 카드 B</td><td><span class="soon">준비 중</span></td></tr>
