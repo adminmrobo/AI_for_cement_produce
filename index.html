@@ -207,7 +207,7 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
 <div id="prog" aria-hidden="true"></div>
 <nav class="top" aria-label="페이지 목차"><div class="wrap">
   <a class="brand" href="#cover">시멘트 공정 최적화</a>
-  <a class="t" href="#campus">공장 부지</a><a class="t" href="#overview">강좌 개요</a><a class="t" href="#goals">학습 목표</a><a class="t" href="#prep">준비·실습</a><a class="t" href="#terms">용어 다섯 개</a><a class="t" href="#data">교재·데이터</a><a class="t" href="#syllabus">주차별 계획</a><a class="t" href="#pages">강의자료</a><a class="t" href="#cards">확인 카드</a><a class="t" href="#grading">성적평가</a><a class="t" href="#exam">시험 방식</a><a class="t" href="#genai">생성형 AI</a>
+  <a class="t" href="#campus">공장 부지</a><a class="t" href="#overview">강좌 개요</a><a class="t" href="#goals">학습 목표</a><a class="t" href="#prep">준비·실습</a><a class="t" href="#terms">용어 다섯 개</a><a class="t" href="#data">교재·데이터</a><a class="t" href="#syllabus">주차별 계획</a><a class="t" href="#pages">강의자료</a><a class="t" href="#practice">4·5주 실습</a><a class="t" href="#cards">확인 카드</a><a class="t" href="#grading">성적평가</a><a class="t" href="#exam">시험 방식</a><a class="t" href="#genai">생성형 AI</a>
 </div></nav>
 <header class="cover fallback" id="cover" data-img="cover_index" role="img" aria-label="연구실 식구 넷 — 초파리 연구원, 박사, 조수(하루), 주판봇이 나란히 선 대체 표지">
   <div class="lineup" aria-hidden="true">
@@ -333,6 +333,7 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
     <thead><tr><th>데이터</th><th>성격</th><th>접근</th><th>사용 주차</th></tr></thead>
     <tbody>
       <tr><td><b>UCI Concrete Compressive Strength</b> (ID 165) · 1,030건 · 8개 항목 · CC BY 4.0</td><td>공개 실측 실험 데이터</td><td><a href="https://archive.ics.uci.edu/dataset/165" target="_blank" rel="noopener">archive.ics.uci.edu/dataset/165</a></td><td>3~6주</td></tr>
+      <tr><td><b>생선 시장 예시 데이터</b> (<code>fish_market_full.csv</code>) · 생선 종류와 무게·길이·높이·두께</td><td>머신러닝 기초용 예시 데이터</td><td>수업 제공 · <a href="#practice">실습자료 ↓</a></td><td>4~5주</td></tr>
       <tr><td><b>굴뚝 자동측정기기 측정결과</b> (한국환경공단)</td><td>공개 국내 실측 데이터</td><td><a href="https://www.cleansys.or.kr" target="_blank" rel="noopener">cleansys.or.kr</a> / <a href="https://www.data.go.kr" target="_blank" rel="noopener">data.go.kr</a></td><td>12주</td></tr>
       <tr><td><b>GCCA GNR</b> 산업 평균 지표</td><td>벤치마크 자료</td><td><a href="https://gccassociation.org/gnr/" target="_blank" rel="noopener">gccassociation.org/gnr</a></td><td>10·12주</td></tr>
       <tr><td><b>가마 운전 데이터</b></td><td>수업용 제작 데이터</td><td>수업 제공</td><td>8~11주</td></tr>
@@ -356,8 +357,8 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
       <tr><td>1주</td><td><b>제조 데이터 분석 개론 — 비용과 품질의 상충 구조</b></td><td>이 과목의 질문</td><td>상충 관계의 정식화 · 세 모듈 개관 · 데이터셋 소개 · 분석 환경 첫 실행</td><td><span class="kind th">이론</span></td><td><a class="open" href="https://adminmrobo.github.io/smart_factory_world/cement/">3D 공장 열기 →</a></td></tr>
       <tr><td>2주</td><td><b>분석 환경 구축과 생성형 AI 활용 기초</b></td><td>도구 준비와 에러 대처</td><td>클라우드 실행 환경의 구조 · 오류 유형별 대처 절차 · 생성형 AI를 이용한 디버깅</td><td><span class="kind pr">실습</span></td><td><span class="soon">준비 중</span></td></tr>
       <tr><td>3주</td><td><b>지도학습 회귀 모델의 이해와 적용</b></td><td>첫 예측 모델</td><td>입력·출력 변수 정의 · 부스팅 트리 회귀 · 성능 지표(RMSE, R²) 해석</td><td><span class="kind pr">실습</span></td><td><span class="soon">준비 중</span></td></tr>
-      <tr><td>4주</td><td><b>데이터 분할·과적합과 모델 검증 방법론</b></td><td>이걸 믿어도 되나</td><td>학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가</td><td><span class="kind pr">실습</span></td><td><span class="soon">준비 중</span></td></tr>
-      <tr class="on"><td>5주</td><td><b>설명가능 AI를 활용한 변수 중요도 분석</b></td><td>무엇이 강도를 정하나</td><td>SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A</td><td><span class="kind pr">실습</span></td><td><a class="open" href="ch05_explainable_ai_importance/">ch05 열기 →</a></td></tr>
+      <tr><td>4주</td><td><b>데이터 분할·과적합과 모델 검증 방법론</b></td><td>이걸 믿어도 되나</td><td>학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가 · <b>실습: 예시 데이터(생선 시장)로 머신러닝 기초 분류 모델 — 2종 · 3종 · 전체</b></td><td><span class="kind pr">실습</span></td><td><a class="open" href="#practice">실습자료 ↓</a></td></tr>
+      <tr class="on"><td>5주</td><td><b>설명가능 AI를 활용한 변수 중요도 분석</b></td><td>무엇이 강도를 정하나</td><td>SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A · <b>실습: 4주에 이어 예시 데이터 분류 모델</b></td><td><span class="kind pr">실습</span></td><td><a class="open" href="ch05_explainable_ai_importance/">ch05 열기 →</a><br><a class="open" href="#practice">실습자료 ↓</a></td></tr>
       <tr class="on"><td>6주</td><td><b>비용함수 설계와 제약조건 하 최적화</b></td><td>값을 붙이면 답이 달라진다</td><td>목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색</td><td><span class="kind pr">실습</span></td><td><a class="open" href="ch06_cost_function_optimization/">ch06 열기 →</a></td></tr>
       <tr class="chk"><td>7주</td><td><b>중간 평가 — 실습 결과 분석 보고서</b></td><td>—</td><td>과제 안내 및 배점 설명 · Take home 제출</td><td><span class="kind ev">평가</span></td><td><a class="open" href="#exam">평가 안내 ↓</a></td></tr>
       <tr class="on"><td>8주</td><td><b>공정 시계열 데이터의 시차 구조와 전처리</b></td><td>결과가 늦게 나오는 문제</td><td>표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별</td><td><span class="kind pr">실습</span></td><td><a class="open" href="ch08_timeseries_lag_preprocessing/">ch08 열기 →</a></td></tr>
@@ -448,6 +449,27 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
     </div>
   </a>
   </div>
+</div>
+</section>
+
+<section id="practice">
+<div class="wrap">
+  <h2>🐟 4·5주 실습자료 — 예시 데이터로 배우는 머신러닝 기초 모델</h2>
+  <p>시멘트 데이터로 들어가기 전에, 누구나 아는 <b>생선</b>으로 머신러닝 기초 모델을 먼저 돌려 봅니다. 생선의 무게·길이·높이·두께를 보고 <b>어떤 생선인지 맞히는 분류 모델</b>입니다. 맞힐 종류를 2종 → 3종 → 전체로 늘려 가며, 종류가 많아질수록 무엇이 어려워지는지 확인합니다.</p>
+  <div class="say" data-who="doc"><img class="who" data-k="doc_front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>모델이 어떻게 배우고, 어떻게 틀리는지는 생선이든 시멘트든 똑같아. 쉬운 데이터로 손에 익혀 두면 시멘트 공정 데이터에서도 같은 순서로 하면 돼.</p></div></div>
+  <div class="tw"><table>
+    <thead><tr><th>순서</th><th>실습</th><th>무엇을 맞히나</th><th>열기</th></tr></thead>
+    <tbody>
+      <tr><td>①</td><td><b>분류 모델 — 2종류</b></td><td>두 종류 생선 중 어느 쪽인지 (이진 분류)</td><td><a class="open" href="https://colab.research.google.com/drive/1ZbHg_-juEGpRCSn1_u2SgljcfdwS11UI?usp=sharing" target="_blank" rel="noopener">Colab 열기 →</a></td></tr>
+      <tr><td>②</td><td><b>분류 모델 — 3종류</b></td><td>세 종류 생선 중 어느 것인지 (다중 분류)</td><td><a class="open" href="https://colab.research.google.com/drive/1bwRHW-kncC3VBbYRpwGpthNgjCn3QHEg?usp=sharing" target="_blank" rel="noopener">Colab 열기 →</a></td></tr>
+      <tr><td>③</td><td><b>분류 모델 — 전체</b></td><td>데이터에 있는 모든 생선 종류</td><td><a class="open" href="https://colab.research.google.com/drive/1ceeu8Oe4-OVSWGjlo2m6-4-xfif0dHYE?usp=sharing" target="_blank" rel="noopener">Colab 열기 →</a></td></tr>
+    </tbody></table></div>
+  <div class="note"><h4>실습 데이터와 진행 방법</h4><ul>
+    <li>실습 데이터: <b><code>fish_market_full.csv</code></b> — 수업 시간에 나눠 드립니다.</li>
+    <li>Colab 링크를 열고 <b>[파일] → [드라이브에 사본 저장]</b>으로 내 사본을 만든 뒤 실행합니다.</li>
+    <li>데이터를 올리라는 칸이 나오면 받은 <code>fish_market_full.csv</code>를 선택해 올립니다.</li>
+    <li>4주와 5주에 걸쳐 ① → ② → ③ 순서로 진행합니다.</li>
+  </ul></div>
 </div>
 </section>
 
@@ -1012,8 +1034,8 @@ const PLOTS = [
   { w: 1, z: 'shipping', t: '제조 데이터 분석 개론 — 비용과 품질의 상충 구조', s: '이 과목의 질문', d: '상충 관계의 정식화 · 세 모듈 개관 · 데이터셋 소개 · 분석 환경 첫 실행', st: 'open', url: F, go: '3D 공장 열기' },
   { w: 2, z: 'control', t: '분석 환경 구축과 생성형 AI 활용 기초', s: '도구 준비와 에러 대처', d: '클라우드 실행 환경의 구조 · 오류 유형별 대처 절차 · 생성형 AI를 이용한 디버깅', st: 'soon', scr: '#2bb3a8', bots: [['genai', 2.1, 1.9]] },
   { w: 3, z: 'raw_mix', t: '지도학습 회귀 모델의 이해와 적용', s: '첫 예측 모델', d: '입력·출력 변수 정의 · 부스팅 트리 회귀 · 성능 지표(RMSE, R²) 해석', st: 'soon', bots: [['ml', 2.3, 2.3]] },
-  { w: 4, z: 'lab', t: '데이터 분할·과적합과 모델 검증 방법론', s: '이걸 믿어도 되나', d: '학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가', st: 'soon', ppl: [['#e8a33d', -2.1, 1.9]] },
-  { w: 5, z: 'cement_mill', t: '설명가능 AI를 활용한 변수 중요도 분석', s: '무엇이 강도를 정하나', d: 'SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A', st: 'open', url: 'ch05_explainable_ai_importance/', go: 'ch05 해설 열기' },
+  { w: 4, z: 'lab', t: '데이터 분할·과적합과 모델 검증 방법론', s: '이걸 믿어도 되나', d: '학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가 · 실습: 생선 시장 예시 데이터로 분류 모델(2종·3종·전체)', st: 'open', url: '#practice', go: '4·5주 실습자료 보기', ppl: [['#e8a33d', -2.1, 1.9]] },
+  { w: 5, z: 'cement_mill', t: '설명가능 AI를 활용한 변수 중요도 분석', s: '무엇이 강도를 정하나', d: 'SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A · 실습: 예시 데이터 분류 모델(4주에 이어서)', st: 'open', url: 'ch05_explainable_ai_importance/', go: 'ch05 해설 열기' },
   { w: 6, z: 'raw_mix', t: '비용함수 설계와 제약조건 하 최적화', s: '값을 붙이면 답이 달라진다', d: '목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색', st: 'open', url: 'ch06_cost_function_optimization/', go: 'ch06 해설 열기', bots: [['rule', 2.3, 2.3]], coins: true },
   { w: 7, z: 'exam', t: '중간 평가 — 실습 결과 분석 보고서', s: '중간점검', d: '과제 안내 및 배점 설명 · Take home 제출', st: 'eval', url: '#exam', go: '평가 안내 보기', flag: '#e8a33d' },
   { w: 8, z: 'kiln', t: '공정 시계열 데이터의 시차 구조와 전처리', s: '결과가 늦게 나오는 문제', d: '표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별', st: 'open', url: 'ch08_timeseries_lag_preprocessing/', go: 'ch08 해설 열기', ppl: [['#2bb3a8', -2.3, 2.3]] },

@@ -27,8 +27,8 @@
 | 1주 | 제조 데이터 분석 개론 — 비용과 품질의 상충 구조 | 이 과목의 질문 | 상충 관계의 정식화 · 세 모듈 개관 · 데이터셋 소개 · 분석 환경 첫 실행 | [3D 공장](https://adminmrobo.github.io/smart_factory_world/cement/) |
 | 2주 | 분석 환경 구축과 생성형 AI 활용 기초 | 도구 준비와 에러 대처 | 클라우드 실행 환경의 구조 · 오류 유형별 대처 절차 · 생성형 AI를 이용한 디버깅 | 준비 중 |
 | 3주 | 지도학습 회귀 모델의 이해와 적용 | 첫 예측 모델 | 입력·출력 변수 정의 · 부스팅 트리 회귀 · 성능 지표(RMSE, R²) 해석 | 준비 중 |
-| 4주 | 데이터 분할·과적합과 모델 검증 방법론 | 이걸 믿어도 되나 | 학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가 | 준비 중 |
-| 5주 | 설명가능 AI를 활용한 변수 중요도 분석 | 무엇이 강도를 정하나 | SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A | [ch05](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/) |
+| 4주 | 데이터 분할·과적합과 모델 검증 방법론 | 이걸 믿어도 되나 | 학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가 · 실습: 예시 데이터(생선 시장)로 머신러닝 기초 분류 모델 — 2종·3종·전체 | [실습자료](https://adminmrobo.github.io/AI_for_cement_produce/#practice) |
+| 5주 | 설명가능 AI를 활용한 변수 중요도 분석 | 무엇이 강도를 정하나 | SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A · 실습: 4주에 이어 예시 데이터 분류 모델 | [ch05](https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/) |
 | 6주 | 비용함수 설계와 제약조건 하 최적화 | 값을 붙이면 답이 달라진다 | 목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색 | [ch06](https://adminmrobo.github.io/AI_for_cement_produce/ch06_cost_function_optimization/) |
 | 7주 | **중간 평가 — 실습 결과 분석 보고서** | — | 과제 안내 및 배점 설명 · Take home 제출 | — |
 | 8주 | 공정 시계열 데이터의 시차 구조와 전처리 | 결과가 늦게 나오는 문제 | 표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별 | [ch08](https://adminmrobo.github.io/AI_for_cement_produce/ch08_timeseries_lag_preprocessing/) |
@@ -39,6 +39,19 @@
 | 13주 | AI 모델 계열별 특성과 산업 적용 타당성 평가 | 기술 총괄 | 합성곱 신경망 · 이상 탐지 · 시계열 딥러닝 · 강화학습 · 상용 자동운전 패키지 · 도입 판단 체크리스트 | 준비 중 |
 | 14주 | 대규모 언어모델을 활용한 분석 보고 자동화 | 생성형 AI 활용과 마무리 | 프롬프트 구성 · 보고서 초안 생성 · 사실 검증 절차 · 기말 과제 구성 점검 | 준비 중 |
 | 15주 | **기말 평가 — 실습 결과 분석 보고서** | — | 과제 안내 및 배점 설명 · Take home 제출 | — |
+
+## 4·5주 실습자료 — 예시 데이터로 배우는 머신러닝 기초 모델
+
+예시 데이터(생선 시장)로 생선의 무게·길이·높이·두께를 보고 종류를 맞히는 분류 모델을 만듭니다. 4주와 5주에 걸쳐 ① → ② → ③ 순서로 진행합니다.
+
+| 순서 | 실습 | 무엇을 맞히나 | Colab |
+|---|---|---|---|
+| ① | 분류 모델 — 2종류 | 두 종류 중 어느 쪽인지 (이진 분류) | [열기](https://colab.research.google.com/drive/1ZbHg_-juEGpRCSn1_u2SgljcfdwS11UI?usp=sharing) |
+| ② | 분류 모델 — 3종류 | 세 종류 중 어느 것인지 (다중 분류) | [열기](https://colab.research.google.com/drive/1bwRHW-kncC3VBbYRpwGpthNgjCn3QHEg?usp=sharing) |
+| ③ | 분류 모델 — 전체 | 데이터에 있는 모든 생선 종류 | [열기](https://colab.research.google.com/drive/1ceeu8Oe4-OVSWGjlo2m6-4-xfif0dHYE?usp=sharing) |
+
+- 실습 데이터: `fish_market_full.csv` (수업 제공) — Colab에서 데이터를 올리라는 칸이 나오면 이 파일을 선택합니다.
+- Colab 링크를 열고 [파일] → [드라이브에 사본 저장]으로 내 사본을 만든 뒤 실행합니다.
 
 ## 폴더 구성
 
