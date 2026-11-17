@@ -32,3 +32,5 @@ ch09_soft_sensor_validation/
 ```
 
 실습 가이드 페이지·노트북·데이터는 `../ch08_timeseries_lag_preprocessing/`에 있습니다 (`practice_guide.html`, `practice_guide.ipynb`, `data/`).
+
+8·9주 통합 실습(2주 데이터, PART 3 소프트센서 · PART 4 무작위 vs 시간순 분할)도 같은 폴더에 있습니다: [`cement_time_lag_softsensor_lab.ipynb`](../ch08_timeseries_lag_preprocessing/cement_time_lag_softsensor_lab.ipynb) · [Colab에서 열기](https://colab.research.google.com/github/adminmrobo/AI_for_cement_produce/blob/main/ch08_timeseries_lag_preprocessing/cement_time_lag_softsensor_lab.ipynb) · 데이터 `data/cement_sensor_1min.csv`, `data/cement_quality_15min.csv`.

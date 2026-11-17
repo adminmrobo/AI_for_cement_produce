@@ -46,7 +46,7 @@
 |---|---|---|
 | `ch05_explainable_ai_importance/` | ch05 「시멘트 품질, AI로 미리 본다」 — 해설 페이지, 실습 데이터(`data/`), 그림(`img/`), 그림 명세(`docs/`) | `ai_for_cement_produce_07` |
 | `ch06_cost_function_optimization/` | ch06 「무엇이 강도를 정하고, 얼마에 만들 것인가」 — 해설 페이지, 그림(`img/`), 그림 명세(`docs/`) | `ai_for_cement_produce_08` |
-| `ch08_timeseries_lag_preprocessing/` | ch08 「온도를 바꿨는데, 품질은 왜 나중에 달라질까?」 — 비전공자판 해설, 실습 데이터(`data/`), 실습 가이드 수정본·그림 명세(`docs/`) | — |
+| `ch08_timeseries_lag_preprocessing/` | ch08 「온도를 바꿨는데, 품질은 왜 나중에 달라질까?」 — 비전공자판 해설, 실습 데이터(`data/`), 실습 가이드 수정본·그림 명세(`docs/`), **8·9주 통합 실습 노트북**(`cement_time_lag_softsensor_lab.ipynb`·`.py`, 데이터 `data/cement_sensor_1min.csv`·`cement_quality_15min.csv`) | — |
 | `ch09_soft_sensor_validation/` | ch09 「시험 결과를 기다리지 않고 품질을 알 수 있을까?」 — 비전공자판 해설, 그림 명세(`docs/`) | — |
 
 수업 전체의 공장 지도는 별도 저장소 [smart_factory_world](https://github.com/adminmrobo/smart_factory_world)의 [시멘트 공장 World](https://adminmrobo.github.io/smart_factory_world/cement/)입니다 — 3D 공장에서 가마의 37분 지연, 정지·재가동, 소프트센서 예측(ch08·ch09)을 재생합니다.
