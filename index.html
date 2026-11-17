@@ -148,7 +148,52 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
 @media (max-width:860px){.card{grid-template-columns:1fr}.trio,.ccards,.half,.exam,ol.goals{grid-template-columns:1fr}.lv{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:460px){.say{grid-template-columns:52px 1fr}.say img.who{width:52px;height:52px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+
+/* 주차별 공장 부지(3D) */
+#campus{padding-top:34px}
+.cp-lead{max-width:820px;color:var(--muted);font-size:15px;margin:0 0 12px}
+.cp-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+.cp-seg{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden}
+.cp-seg button,.cp-home{font:inherit;font-size:13.5px;border:0;background:#fff;color:var(--text);padding:4px 14px;cursor:pointer}
+.cp-seg button[aria-pressed="true"]{background:var(--gfp);color:#fff;font-weight:700}
+.cp-home{border:1px solid var(--rule);border-radius:999px}
+.cp-home:hover,.cp-seg button:hover{color:var(--gfp)}.cp-seg button[aria-pressed="true"]:hover{color:#fff}
+.cp-key{font-size:12.5px;color:var(--muted);display:flex;gap:10px;align-items:center;margin-left:auto}
+.cp-key i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.k-open{background:var(--gfp)}.k-eval{background:var(--amber)}.k-soon{background:#b9bfc8}
+.cp-stage{position:relative;height:min(600px,72vw);min-height:380px;background:#fff;border:1px solid var(--rule);border-radius:18px;overflow:hidden}
+#cpCv{position:absolute;inset:0}#cpCv canvas{display:block;cursor:grab}
+#cpLbl{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cp-l{position:absolute;transform:translate(-50%,-100%);white-space:nowrap;font-size:12px;line-height:1.3;background:rgba(255,255,255,.94);border:1px solid #d5dae1;border-left:4px solid #b9bfc8;border-radius:8px;padding:2px 7px;color:#2b2f40;box-shadow:0 1px 4px rgba(20,30,50,.10)}
+.cp-l b{margin-right:4px}
+.cp-l.open{border-left-color:var(--gfp)}.cp-l.open b{color:var(--gfp)}
+.cp-l.eval{border-left-color:var(--amber)}.cp-l.eval b{color:var(--amber)}
+.cp-l.soon{color:#6b7083}
+.cp-l.hov{border-color:var(--gfp);box-shadow:0 2px 10px rgba(19,138,82,.25)}
+.cp-stage.narrow .cp-l span{display:none}
+.cp-info{position:absolute;left:12px;bottom:12px;width:min(360px,calc(100% - 24px));background:#fff;border:1px solid var(--rule);border-top:4px solid var(--gfp);border-radius:14px;padding:12px 14px;box-shadow:0 6px 24px rgba(20,30,50,.14);font-size:14px}
+.cp-info.soon{border-top-color:#b9bfc8}.cp-info.eval{border-top-color:var(--amber)}
+.cp-info .wk{font-size:12.5px;color:var(--muted)}
+.cp-info h4{margin:2px 0 4px;font-size:16.5px;line-height:1.35}
+.cp-info p{margin:4px 0;color:#3c4157}
+.cp-info .zone{font-size:12.5px;color:var(--muted)}
+.cp-info a.btn{display:inline-block;margin-top:6px;background:var(--gfp);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:3px 14px}
+.cp-info.eval a.btn{background:var(--amber)}
+.cp-info .x{position:absolute;right:8px;top:6px;border:0;background:none;font-size:18px;color:var(--muted);cursor:pointer}
+.cp-info[hidden],.cp-err[hidden]{display:none!important}
+.cp-err{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:20px}
+.cp-list{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.cp-list li{min-width:0}
+.cp-list.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cp-list li a,.cp-list li button{display:block;width:100%;text-align:left;font:inherit;font-size:13px;line-height:1.35;background:var(--panel);border:1px solid var(--rule);border-left:4px solid #b9bfc8;border-radius:10px;padding:6px 8px;color:var(--text);text-decoration:none;cursor:pointer}
+.cp-list li.open a,.cp-list li.open button{border-left-color:var(--gfp)}.cp-list li.eval a,.cp-list li.eval button{border-left-color:var(--amber)}
+.cp-list li b{display:block;font-size:12px;color:var(--muted)}
+.cp-list li.open b{color:var(--gfp)}.cp-list li.eval b{color:var(--amber)}
+.cp-list li a:hover,.cp-list li button:hover{border-color:var(--gfp)}
+@media (max-width:640px){.cp-stage{min-height:0;height:92vw}}
+@media (max-width:700px){.cp-list,.cp-list.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.cp-key{margin-left:0}}
 </style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 <!-- lab-kg:head -->
 <meta name="citation_title" content="AI를 활용한 시멘트 공정 최적화">
 <meta name="dc.title" content="AI를 활용한 시멘트 공정 최적화">
@@ -162,7 +207,7 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
 <div id="prog" aria-hidden="true"></div>
 <nav class="top" aria-label="페이지 목차"><div class="wrap">
   <a class="brand" href="#cover">시멘트 공정 최적화</a>
-  <a class="t" href="#overview">강좌 개요</a><a class="t" href="#goals">학습 목표</a><a class="t" href="#prep">준비·실습</a><a class="t" href="#terms">용어 다섯 개</a><a class="t" href="#data">교재·데이터</a><a class="t" href="#syllabus">주차별 계획</a><a class="t" href="#pages">강의자료</a><a class="t" href="#cards">확인 카드</a><a class="t" href="#grading">성적평가</a><a class="t" href="#exam">시험 방식</a><a class="t" href="#genai">생성형 AI</a>
+  <a class="t" href="#campus">공장 부지</a><a class="t" href="#overview">강좌 개요</a><a class="t" href="#goals">학습 목표</a><a class="t" href="#prep">준비·실습</a><a class="t" href="#terms">용어 다섯 개</a><a class="t" href="#data">교재·데이터</a><a class="t" href="#syllabus">주차별 계획</a><a class="t" href="#pages">강의자료</a><a class="t" href="#cards">확인 카드</a><a class="t" href="#grading">성적평가</a><a class="t" href="#exam">시험 방식</a><a class="t" href="#genai">생성형 AI</a>
 </div></nav>
 <header class="cover fallback" id="cover" data-img="cover_index" role="img" aria-label="연구실 식구 넷 — 초파리 연구원, 박사, 조수(하루), 주판봇이 나란히 선 대체 표지">
   <div class="lineup" aria-hidden="true">
@@ -188,6 +233,28 @@ footer{padding:30px 0 60px;color:var(--muted);font-size:14px}
   <div class="cast" aria-label="등장인물"><span class="doc">박사</span><span class="asst">조수(하루)</span><span class="fly">초파리 연구원</span><span class="robo">주판봇</span></div>
 </div>
 </header>
+
+<section id="campus">
+<div class="wrap">
+  <h2>🏭 주차별 공장 부지 — 15개 장, 15개 공장</h2>
+  <p class="cp-lead">한 주에 공장 하나. 부지를 누르면 그 주차의 주제와 해설 페이지가 열립니다. 공장 건물은 <a href="https://adminmrobo.github.io/smart_factory_world/cement/">시멘트 공장 World</a>의 3D 공장에서 가져왔습니다. 드래그하면 돌려 볼 수 있습니다.</p>
+  <div class="cp-bar">
+    <div class="cp-seg" role="group" aria-label="부지 배치">
+      <button type="button" data-lay="3x5" aria-pressed="true">3 × 5 배치</button>
+      <button type="button" data-lay="4x4" aria-pressed="false">4 × 4 배치</button>
+    </div>
+    <button type="button" class="cp-home" id="cpHome">처음 시점</button>
+    <span class="cp-key"><i class="k-open"></i>해설 열림 <i class="k-eval"></i>평가 <i class="k-soon"></i>준비 중</span>
+  </div>
+  <div class="cp-stage" id="cpStage">
+    <div id="cpCv"></div>
+    <div id="cpLbl" aria-hidden="true"></div>
+    <div class="cp-info" id="cpInfo" hidden></div>
+    <div class="cp-err" id="cpErr" hidden>3D 화면을 불러오지 못했습니다. 아래 목록에서 주차를 고르세요.</div>
+  </div>
+  <ol class="cp-list" id="cpList" aria-label="주차별 공장 목록"></ol>
+</div>
+</section>
 
 <section id="overview">
 <div class="wrap">
@@ -938,4 +1005,260 @@ return {download:download,buildPackage:buildPackage,makeZip:makeZip,toJsonLd:toJ
 
 </script>
 <!-- /lab-kg:script -->
+<script type="module">
+/* 주차별 공장 부지 — 건물 모양은 smart_factory_world/cement/factory 의 3D 공장(three.js 0.170)에서 가져옴 */
+const F = 'https://adminmrobo.github.io/smart_factory_world/cement/';
+const PLOTS = [
+  { w: 1, z: 'shipping', t: '제조 데이터 분석 개론 — 비용과 품질의 상충 구조', s: '이 과목의 질문', d: '상충 관계의 정식화 · 세 모듈 개관 · 데이터셋 소개 · 분석 환경 첫 실행', st: 'open', url: F, go: '3D 공장 열기' },
+  { w: 2, z: 'control', t: '분석 환경 구축과 생성형 AI 활용 기초', s: '도구 준비와 에러 대처', d: '클라우드 실행 환경의 구조 · 오류 유형별 대처 절차 · 생성형 AI를 이용한 디버깅', st: 'soon', scr: '#2bb3a8', bots: [['genai', 2.1, 1.9]] },
+  { w: 3, z: 'raw_mix', t: '지도학습 회귀 모델의 이해와 적용', s: '첫 예측 모델', d: '입력·출력 변수 정의 · 부스팅 트리 회귀 · 성능 지표(RMSE, R²) 해석', st: 'soon', bots: [['ml', 2.3, 2.3]] },
+  { w: 4, z: 'lab', t: '데이터 분할·과적합과 모델 검증 방법론', s: '이걸 믿어도 되나', d: '학습·검증·시험 분할 · 과적합 · 데이터 누수 · 그룹 단위 분할과 성능 재평가', st: 'soon', ppl: [['#e8a33d', -2.1, 1.9]] },
+  { w: 5, z: 'cement_mill', t: '설명가능 AI를 활용한 변수 중요도 분석', s: '무엇이 강도를 정하나', d: 'SHAP 기여도 분해 · 파생 변수 생성 · 중요도와 인과의 구분 · 확인 카드 A', st: 'open', url: 'ch05_explainable_ai_importance/', go: 'ch05 해설 열기' },
+  { w: 6, z: 'raw_mix', t: '비용함수 설계와 제약조건 하 최적화', s: '값을 붙이면 답이 달라진다', d: '목적함수 정의 · 단가 반영 원가 산출 · 목표 성능 제약 하 최소 원가 탐색', st: 'open', url: 'ch06_cost_function_optimization/', go: 'ch06 해설 열기', bots: [['rule', 2.3, 2.3]], coins: true },
+  { w: 7, z: 'exam', t: '중간 평가 — 실습 결과 분석 보고서', s: '중간점검', d: '과제 안내 및 배점 설명 · Take home 제출', st: 'eval', url: '#exam', go: '평가 안내 보기', flag: '#e8a33d' },
+  { w: 8, z: 'kiln', t: '공정 시계열 데이터의 시차 구조와 전처리', s: '결과가 늦게 나오는 문제', d: '표본 주기 불일치 · 공정 지연(약 37분) · 시차 탐색 · 비정상 운전 구간 식별', st: 'open', url: 'ch08_timeseries_lag_preprocessing/', go: 'ch08 해설 열기', ppl: [['#2bb3a8', -2.3, 2.3]] },
+  { w: 9, z: 'cooler', t: '소프트센서 구현과 시계열 검증 설계', s: '품질 예측 모델 만들기', d: '시차 변수 생성 · 정지 구간 제외 · 시간 순서 분할 대 무작위 분할 비교', st: 'open', url: 'ch09_soft_sensor_validation/', go: 'ch09 해설 열기', bots: [['ml', -2.2, 2.2]] },
+  { w: 10, z: 'preheater', t: '공정 변수 요인 분석과 경제성 평가', s: '연료를 얼마나 줄일 수 있나', d: '요인 기여도 순위 · 연료 절감 시나리오 예측 · 비용 환산 · 산업 평균 대조 · 확인 카드 C', st: 'soon', bots: [['ml', 2.2, -2.2]] },
+  { w: 11, z: 'control', t: '위험 기반 의사결정과 최적 운전점 도출', s: '경계선 찾기', d: '불량 발생 확률 추정 · 기대손실 산출 · 절감액-손실 균형점 · 허용 위험별 권고안', st: 'soon', scr: '#e8a33d', bots: [['ml', 2.1, 1.9]], ppl: [['#f4f4f4', -2.1, 1.9]] },
+  { w: 12, z: 'stack', t: '대체연료 적용의 다목적 상충 분석', s: '폐자원 연료', d: '대체율 구간별 생산량·품질 비교 · 공개 배출 데이터 수집 및 시각화 · 확인 카드 B', st: 'soon', bots: [['ml', 2.3, 2.2]] },
+  { w: 13, z: 'agents', t: 'AI 모델 계열별 특성과 산업 적용 타당성 평가', s: '기술 총괄', d: '합성곱 신경망 · 이상 탐지 · 시계열 딥러닝 · 강화학습 · 상용 자동운전 패키지 · 도입 판단 체크리스트', st: 'soon' },
+  { w: 14, z: 'control', t: '대규모 언어모델을 활용한 분석 보고 자동화', s: '생성형 AI 활용과 마무리', d: '프롬프트 구성 · 보고서 초안 생성 · 사실 검증 절차 · 기말 과제 구성 점검', st: 'soon', scr: '#7d6bc4', bots: [['genai', 2.1, 1.9]], papers: true },
+  { w: 15, z: 'exam', t: '기말 평가 — 실습 결과 분석 보고서', s: '기말점검', d: '과제 안내 및 배점 설명 · Take home 제출', st: 'eval', url: '#exam', go: '평가 안내 보기', flag: '#3cc98c' },
+];
+const GATE = { w: 0, z: 'gate', t: '시멘트 공장 World — 전체 공장', s: '공장 전체 보기', d: '15개 부지의 건물이 한 줄로 이어진 실제 공장. 가마 37분 재생 · 병목 신호판 · 결정 기록.', st: 'open', url: F + 'factory/', go: '공장 World 열기' };
+const ZNAME = { shipping: '사일로·출하', control: '관제실', raw_mix: '원료·배합장', lab: '품질 시험실', cement_mill: '시멘트 분쇄기', exam: '평가동', kiln: '가마(소성)', cooler: '냉각기', preheater: '예열탑·버너', stack: '굴뚝·대체연료', agents: 'AI 에이전트 차고', gate: '공장 정문' };
+const ZCOL = { shipping: '#727a82', control: '#34495e', raw_mix: '#6f8f5c', lab: '#2b8a83', cement_mill: '#6b6191', exam: '#b8925a', kiln: '#a5583c', cooler: '#3f6e8c', preheater: '#a5583c', stack: '#857645', agents: '#5c6f86', gate: '#2b8a83' };
+const label = p => p.w ? `${p.w}주` : '정문';
+
+const $ = id => document.getElementById(id);
+const stage = $('cpStage'), list = $('cpList'), info = $('cpInfo');
+let lay = innerWidth < 640 ? '4x4' : '3x5';
+let three = null;
+
+function showInfo(i) {
+  const p = i === 15 ? GATE : PLOTS[i];
+  info.className = 'cp-info ' + p.st; info.hidden = false;
+  info.innerHTML = `<button class="x" type="button" aria-label="닫기">×</button><div class="wk">${label(p)} · ${ZNAME[p.z]}</div><h4>${p.t}</h4><p><b>${p.s}</b></p><p>${p.d}</p>` +
+    (p.url ? `<a class="btn" href="${p.url}">${p.go} →</a>` : `<div class="zone">해설 페이지 준비 중 — 순서대로 올라옵니다.</div>`);
+  info.querySelector('.x').onclick = () => { info.hidden = true; three?.select(-1); };
+  three?.select(i);
+}
+function renderList() {
+  const items = lay === '4x4' ? [...PLOTS, GATE] : PLOTS;
+  list.className = 'cp-list' + (lay === '4x4' ? ' g4' : '');
+  list.innerHTML = items.map((p, i) => `<li class="${p.st}">${p.url ? `<a href="${p.url}" data-i="${i}">` : `<button type="button" data-i="${i}">`}<b>${label(p)} · ${ZNAME[p.z]}</b>${p.s}${p.url ? '</a>' : '</button>'}</li>`).join('');
+  list.querySelectorAll('button[data-i]').forEach(b => b.onclick = () => { showInfo(+b.dataset.i); stage.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+}
+function setLay(l) {
+  lay = l; document.querySelectorAll('.cp-seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lay === l));
+  renderList(); three?.layout(l); if (lay === '3x5' && !info.hidden && info.dataset.gate) info.hidden = true;
+}
+document.querySelectorAll('.cp-seg button').forEach(b => b.onclick = () => setLay(b.dataset.lay));
+renderList(); document.querySelectorAll('.cp-seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lay === lay));
+
+try { three = await initThree(); three.layout(lay, true); } catch (e) { console.error(e); $('cpErr').hidden = false; }
+$('cpHome').onclick = () => three?.home();
+
+async function initThree() {
+  const THREE = await import('three');
+  const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
+  const host = $('cpCv'), lblHost = $('cpLbl');
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  host.appendChild(renderer.domElement);
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#ffffff');
+  const cam = new THREE.OrthographicCamera(-10, 10, 10, -10, .1, 800);
+  const controls = new OrbitControls(cam, renderer.domElement);
+  controls.enableDamping = true; controls.maxPolarAngle = Math.PI / 2.4; controls.minPolarAngle = Math.PI / 9;
+  controls.minZoom = .7; controls.maxZoom = 5; controls.screenSpacePanning = false;
+
+  scene.add(new THREE.HemisphereLight('#ffffff', '#c9d1d8', 1.55));
+  const sun = new THREE.DirectionalLight('#fff6e8', 1.75); sun.position.set(30, 50, 22); sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -45, right: 45, top: 45, bottom: -45, near: 1, far: 160 }); sun.shadow.bias = -.0005;
+  scene.add(sun);
+
+  const M = (c, o = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: .75, metalness: .05, ...o });
+  const add = (geo, mat, x, y, z, p) => { const m = new THREE.Mesh(geo, mat); m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; p.add(m); return m; };
+  const box = (w, h, d, c, x, y, z, p) => add(new THREE.BoxGeometry(w, h, d), typeof c === 'string' ? M(c) : c, x, y, z, p);
+  const cyl = (r, h, c, x, y, z, p, seg = 20) => add(new THREE.CylinderGeometry(r, r, h, seg), typeof c === 'string' ? M(c) : c, x, y, z, p);
+  const cone = (r, h, c, x, z, p) => add(new THREE.ConeGeometry(r, h, 18), M(c), x, B + h / 2, z, p);
+  const B = .5; // 부지 판 윗면 높이
+  const FAM = { rule: '#9aa7b0', ml: '#2bb3a8', dl: '#7d6bc4', genai: '#e8a33d' };
+  const person = (p, body, x, z) => { const g = new THREE.Group(); g.position.set(x, B, z); p.add(g); add(new THREE.CylinderGeometry(.24, .3, .85, 14), M(body), 0, .45, 0, g); add(new THREE.SphereGeometry(.24, 14, 12), M('#f1d9c2'), 0, 1.12, 0, g); return g; };
+  const robot = (p, fam, x, z) => { const g = new THREE.Group(); g.position.set(x, B, z); p.add(g); add(new THREE.BoxGeometry(.5, .55, .38), M('#c9d1d6'), 0, .5, 0, g); add(new THREE.BoxGeometry(.42, .34, .36), M('#aab4ba'), 0, .98, 0, g); add(new THREE.CylinderGeometry(.03, .03, .3, 6), M('#555'), 0, 1.3, 0, g); add(new THREE.SphereGeometry(.07, 8, 6), M(FAM[fam], { emissive: FAM[fam], emissiveIntensity: .8 }), 0, 1.47, 0, g); const ring = new THREE.Mesh(new THREE.TorusGeometry(.48, .05, 6, 28), M(FAM[fam], { emissive: FAM[fam], emissiveIntensity: .5 })); ring.rotation.x = Math.PI / 2; ring.position.y = .06; g.add(ring); return g; };
+
+  // 바닥 · 도로
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.ShadowMaterial({ opacity: .10 })); ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; scene.add(ground);
+  const roadM = new THREE.MeshBasicMaterial({ color: '#f1f3f6' });
+  const roads = new THREE.Group(); scene.add(roads);
+
+  const anim = []; // 프레임마다 돌릴 것
+  const SIZE = 7.6, GAP = 10.4;
+  // ---- 건물: factory/index.html 의 구역 모양을 부지 크기(6.6)에 맞춰 옮김
+  const BUILD = {
+    shipping(g) {
+      [[-1.3, -1.1], [1.1, -1.1]].forEach(([x, z]) => { cyl(1.0, 4.4, '#d6dadd', x, B + 2.2, z, g); add(new THREE.ConeGeometry(1.0, .7, 20), M('#aeb5ba'), x, B + 4.75, z, g); });
+      box(2.6, .9, 1.1, '#e0e3e5', -.4, B + .5, 1.9, g); box(.9, .9, 1.1, '#2b8a83', 1.3, B + .5, 1.9, g);
+      [-1.3, -.1, 1.3].forEach(x => { const w = cyl(.22, .16, '#2a2f33', x, B + .1, 2.48, g, 12); w.rotation.x = Math.PI / 2; });
+    },
+    control(g, p) {
+      box(4.6, 2.4, 3.2, '#c9d3da', 0, B + 1.2, -.6, g); box(4.7, .25, 3.3, '#55656f', 0, B + 2.5, -.6, g);
+      const scr = box(3.6, 1.1, .08, M('#123', { emissive: p.scr || '#2bb3a8', emissiveIntensity: .7 }), 0, B + 1.45, 1.05, g);
+      anim.push(t => { scr.material.emissiveIntensity = .55 + .25 * Math.sin(t * 2 + p.w); });
+      if (p.papers) [-1.6, -1.1].forEach((x, i) => box(.55, .25 + i * .2, .75, '#f6f3ea', x, B + .15 + i * .1, 2.2, g));
+    },
+    raw_mix(g, p) {
+      cone(1.25, 1.55, '#d8d0bf', -1.8, -1.3, g); cone(.95, 1.15, '#4b5056', .5, -1.6, g); cone(.75, .95, '#efece3', 2.2, -1.2, g);
+      box(5.2, .18, .6, '#22333a', 0, B + .9, 1.0, g); for (let i = 0; i < 4; i++) box(.15, .8, .15, '#3c4f57', -2.2 + i * 1.45, B + .4, 1.0, g);
+      if (p.coins) [[-.9, 1.6], [0, 2.4], [.9, 1.6]].forEach(([x, z], k) => { for (let j = 0; j < 3 + k; j++) cyl(.3, .1, '#e3b341', x, B + .06 + j * .11, z + .4, g, 18); });
+    },
+    lab(g) {
+      box(4.2, 2, 2.8, '#eef3f3', 0, B + 1, -.7, g); box(3.6, .5, .06, M('#0f2f33', { emissive: '#7fd6cd', emissiveIntensity: .3 }), 0, B + 1.3, .72, g);
+      box(1.8, .7, .8, '#7b8b8f', 1.6, B + .35, 1.6, g);
+      const lamp = add(new THREE.SphereGeometry(.42, 18, 14), M('#3cc98c', { emissive: '#3cc98c', emissiveIntensity: .9 }), 0, B + 2.45, -.7, g);
+      anim.push(t => { lamp.material.emissiveIntensity = .6 + .4 * Math.sin(t * 3); });
+    },
+    cement_mill(g) {
+      const mill = cyl(1, 3.6, '#b9b2d6', -.4, B + 1.25, 0, g, 24); mill.rotation.z = Math.PI / 2;
+      box(1.1, 1.1, 1.1, '#4a4366', 2.0, B + .55, 0, g); box(3.6, .5, 1.4, '#3a3452', -.4, B + .25, 0, g);
+      anim.push((t, dt) => { mill.rotation.x += dt * 1.2; });
+    },
+    kiln(g) {
+      const k = new THREE.Group(); k.position.set(-.1, B + 1.45, 0); k.rotation.z = Math.PI / 2 + .07; g.add(k);
+      const shellM = M('#7a8288', { emissive: '#ff5a1f', emissiveIntensity: .12 });
+      const shell = new THREE.Mesh(new THREE.CylinderGeometry(.85, .85, 5.6, 28), shellM); shell.castShadow = true; k.add(shell);
+      [-1.9, 0, 1.9].forEach(y => { const r = new THREE.Mesh(new THREE.TorusGeometry(.93, .11, 8, 28), M('#2f363b', { metalness: .4 })); r.rotation.x = Math.PI / 2; r.position.y = y; r.castShadow = true; k.add(r); });
+      for (let i = 0; i < 6; i++) { const s = new THREE.Mesh(new THREE.BoxGeometry(.07, 5.6, .07), M('#3a4248')); const a = i / 6 * Math.PI * 2; s.position.set(Math.cos(a) * .86, 0, Math.sin(a) * .86); k.add(s); }
+      [-1.9, 0, 1.9].forEach(x => box(.6, .75, 1.2, '#3e4a50', x, B + .38, 0, g));
+      const hood = box(1, 2, 2, '#5b6469', 3.0, B + 1.0, 0, g);
+      box(1.4, 2.4, 1.4, '#c7cdd1', -3.0, B + 1.2, -1.6, g);
+      const glow = new THREE.PointLight('#ff6a2b', 8, 6); glow.position.set(2.4, B + 1.5, 0); g.add(glow);
+      anim.push((t, dt) => { k.rotation.y += dt * .6; shellM.emissiveIntensity = .12 + .06 * Math.sin(t * 2); });
+    },
+    cooler(g) {
+      box(3.2, 1, 3.2, '#9fb3bf', -.6, B + .5, -.5, g); for (let i = 0; i < 5; i++) box(3.0, .06, .12, '#3d5566', -.6, B + 1.03, -1.7 + i * .6, g);
+      const fan = cyl(.6, .3, '#2e4757', -.6, B + .6, 1.7, g); fan.rotation.x = Math.PI / 2;
+      cyl(.08, 2.2, '#55656f', 2.0, B + 1.1, -.8, g, 8);
+      const lamp = add(new THREE.SphereGeometry(.36, 16, 12), M('#3cc98c', { emissive: '#3cc98c', emissiveIntensity: .9 }), 2.0, B + 2.4, -.8, g);
+      anim.push((t, dt) => { fan.rotation.y += dt * 4; const q = Math.sin(t * .7); const c = q > .3 ? '#3cc98c' : q > -.4 ? '#e8b84a' : '#3cc98c'; lamp.material.color.set(c); lamp.material.emissive.set(c); });
+    },
+    preheater(g) {
+      [[2.2, 1.5], [1.9, 1.4], [1.6, 1.3], [1.3, 1.1]].reduce((y, [s, h]) => { box(s, h, s, '#c7cdd1', -.8, y + h / 2, -.6, g); return y + h; }, B);
+      cyl(.22, 1.6, '#8a949a', -.8, B + 6.1, -.6, g);
+      const burner = cyl(.3, 1.6, '#5b6469', 1.6, B + .7, 1.0, g); burner.rotation.z = Math.PI / 2;
+      const flame = add(new THREE.ConeGeometry(.35, 1.1, 16), M('#ff7a2b', { emissive: '#ff5a1f', emissiveIntensity: 1.2 }), 2.9, B + .7, 1.0, g); flame.rotation.z = -Math.PI / 2; flame.castShadow = false;
+      anim.push(t => { const s = .85 + .2 * Math.sin(t * 9); flame.scale.set(1, s, 1); });
+    },
+    stack(g) {
+      cyl(.5, 7, '#c8c2b0', .9, B + 3.5, -1.2, g); [1.6, 3.8, 6].forEach(y => cyl(.53, .32, '#b5533a', .9, B + y, -1.2, g));
+      box(2.4, 1.2, 1.8, '#4d4630', -1.4, B + .6, 1.1, g);
+      for (let i = 0; i < 3; i++) { const t = add(new THREE.TorusGeometry(.42, .17, 8, 18), M('#1e1e1e'), -1.9 + i * .1, B + .18 + i * .34, -1.4, g); t.rotation.x = Math.PI / 2; }
+      const smM = new THREE.MeshBasicMaterial({ color: '#b9c1c4', transparent: true, opacity: .35, depthWrite: false });
+      const smoke = []; for (let i = 0; i < 8; i++) { const s = new THREE.Mesh(new THREE.SphereGeometry(.42, 10, 8), smM.clone()); s.userData.ph = i / 8; g.add(s); smoke.push(s); }
+      anim.push((t, dt) => smoke.forEach(s => { s.userData.ph = (s.userData.ph + dt * .16) % 1; const f = s.userData.ph; s.position.set(.9 + f * 1.6, B + 7.1 + f * 3.2, -1.2 - f * .5); s.scale.setScalar(.6 + f * 1.5); s.material.opacity = .42 * (1 - f); }));
+    },
+    exam(g, p) {
+      box(4.8, 2, 3.2, '#f4efe4', 0, B + 1, -.6, g);
+      const roof = add(new THREE.CylinderGeometry(1.25, 1.25, 5.1, 3), M('#8a5a3c'), 0, B + 2.35, -.6, g); roof.rotation.z = Math.PI / 2; roof.scale.set(1, 1, 1.45);
+      box(1, 1.3, .1, '#6b4a33', 0, B + .65, 1.02, g);
+      cyl(.06, 3.4, '#8a949a', 2.6, B + 1.7, 1.6, g, 8);
+      const flag = add(new THREE.PlaneGeometry(1.1, .7), M(p.flag, { side: THREE.DoubleSide, emissive: p.flag, emissiveIntensity: .25 }), 3.15, B + 3.0, 1.6, g);
+      anim.push(t => { flag.rotation.y = Math.sin(t * 2.4 + p.w) * .35; });
+      [-1.2, 0, 1.2].forEach(x => box(.7, .5, .5, '#c8b28d', x, B + .25, 2.2, g));
+    },
+    agents(g) {
+      cyl(2.2, .12, '#dfe5ea', 0, B + .06, 0, g, 40);
+      [['rule', -1.3, -1.3], ['ml', 1.3, -1.3], ['dl', -1.3, 1.3], ['genai', 1.3, 1.3]].forEach(([f, x, z]) => { const r = robot(g, f, x, z); r.position.y = B + .12; anim.push(t => { r.rotation.y = Math.sin(t + x * z) * .8; }); });
+    },
+    gate(g) {
+      [-2.2, 2.2].forEach(x => box(.7, 3.2, .7, '#c9d3da', x, B + 1.6, .4, g)); box(5.2, .6, .9, '#2b8a83', 0, B + 3.4, .4, g);
+      [[-1.5, -2.1], [0, -2.3], [1.5, -2.1]].forEach(([x, z]) => box(1.1, .9 + Math.abs(x) * .3, 1.1, '#d6dadd', x, B + .45 + Math.abs(x) * .15, z, g));
+    },
+  };
+
+  const items = [...PLOTS, GATE];
+  const plots = items.map((p, i) => {
+    const g = new THREE.Group(); scene.add(g);
+    const curb = box(SIZE + .5, .3, SIZE + .5, '#d4d9df', 0, .15, 0, g); curb.castShadow = false;
+    const tile = box(SIZE, .22, SIZE, M(ZCOL[p.z], { roughness: .95, transparent: true, opacity: 1 }), 0, B - .11, 0, g); tile.userData.i = i; tile.castShadow = false;
+    const edge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(SIZE + .5, .3, SIZE + .5)), new THREE.LineBasicMaterial({ color: '#b5bcc5' })); edge.position.y = .15; g.add(edge);
+    // 상태 띠 (부지 앞쪽 테두리)
+    const sc = p.st === 'open' ? '#138a52' : p.st === 'eval' ? '#c98a1c' : '#b9bfc8';
+    box(SIZE + .5, .32, .28, sc, 0, .17, SIZE / 2 + .25, g).castShadow = false;
+    BUILD[p.z](g, p);
+    (p.bots || []).forEach(([f, x, z]) => robot(g, f, x, z));
+    (p.ppl || []).forEach(([c, x, z]) => person(g, c, x, z));
+    const sel = new THREE.Mesh(new THREE.RingGeometry(SIZE * .62, SIZE * .66, 4, 1), new THREE.MeshBasicMaterial({ color: '#138a52', transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false }));
+    sel.rotation.x = -Math.PI / 2; sel.rotation.z = Math.PI / 4; sel.position.y = .02; g.add(sel);
+    const el = document.createElement('div'); el.className = 'cp-l ' + p.st; el.innerHTML = `<b>${label(p)}</b><span>${p.s}</span>`; lblHost.appendChild(el);
+    return { p, g, tile, sel, el, target: new THREE.Vector3(), lift: 0, vis: 1, visT: 1 };
+  });
+  const tiles = plots.map(o => o.tile);
+
+  let ctr = new THREE.Vector3(), half = { w: 30, d: 20 };
+  function layout(l, now) {
+    const cols = l === '4x4' ? 4 : 5, rows = l === '4x4' ? 4 : 3;
+    const W = (cols - 1) * GAP, D = (rows - 1) * GAP;
+    plots.forEach((o, i) => {
+      const show = i < 15 || l === '4x4'; o.visT = show ? 1 : 0;
+      const c = i % cols, r = Math.floor(i / cols);
+      o.target.set(c * GAP - W / 2, 0, r * GAP - D / 2);
+      if (now) { o.g.position.copy(o.target); o.vis = o.visT; }
+    });
+    roads.clear();
+    const RW = GAP - SIZE - .5;
+    for (let c = 0; c <= cols; c++) { const m = new THREE.Mesh(new THREE.BoxGeometry(RW, .04, D + GAP + RW), roadM); m.position.set(c * GAP - W / 2 - GAP / 2, .02, 0); m.receiveShadow = true; roads.add(m); }
+    for (let r = 0; r <= rows; r++) { const m = new THREE.Mesh(new THREE.BoxGeometry(W + GAP + RW, .04, RW), roadM); m.position.set(0, .021, r * GAP - D / 2 - GAP / 2); m.receiveShadow = true; roads.add(m); }
+    half = { w: (W + GAP) / 2, d: (D + GAP) / 2 };
+    fit(); if (now) home();
+  }
+  const HOME = new THREE.Vector3(30, 66, 72).normalize();
+  function fit() {
+    const w = host.clientWidth, h = host.clientHeight || 400, a = w / h;
+    renderer.setSize(w, h);
+    // 처음 시점 방향에서 부지 전체(바닥~건물 높이)가 화면에 들어가도록 테두리를 계산
+    const tmp = new THREE.PerspectiveCamera(); tmp.position.copy(HOME).multiplyScalar(100).add(ctr); tmp.lookAt(ctr); tmp.updateMatrixWorld();
+    const inv = tmp.matrixWorldInverse; let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
+    for (const sx of [-1, 1]) for (const sz of [-1, 1]) for (const y of [0, 6]) { const q = new THREE.Vector3(sx * half.w, y, sz * half.d).add(ctr).applyMatrix4(inv); x0 = Math.min(x0, q.x); x1 = Math.max(x1, q.x); y0 = Math.min(y0, q.y); y1 = Math.max(y1, q.y); }
+    const hw = (x1 - x0) / 2 + 1, hh0 = (y1 - y0) / 2 + 2.2; ctrOff = (y1 + y0) / 2;
+    const hh = Math.max(hh0, hw / a);
+    cam.left = -hh * a; cam.right = hh * a; cam.top = hh; cam.bottom = -hh; cam.updateProjectionMatrix();
+    stage.classList.toggle('narrow', w < 720);
+  }
+  let ctrOff = 0;
+  function home() { cam.position.copy(HOME).multiplyScalar(100).add(ctr); cam.zoom = 1; cam.updateProjectionMatrix(); controls.target.copy(ctr); controls.update();
+    // 화면 세로 중심 보정
+    cam.updateMatrixWorld(); const camUp = new THREE.Vector3().setFromMatrixColumn(cam.matrixWorld, 1).multiplyScalar(ctrOff); cam.position.add(camUp); controls.target.add(camUp); controls.update(); }
+  addEventListener('resize', fit);
+
+  // 고르기·누르기
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null, hov = -1, selI = -1;
+  const pick = e => { const r = renderer.domElement.getBoundingClientRect(); ndc.set((e.clientX - r.left) / r.width * 2 - 1, -(e.clientY - r.top) / r.height * 2 + 1); ray.setFromCamera(ndc, cam); const h = ray.intersectObjects(tiles.filter((t, i) => plots[i].visT > 0), false)[0]; return h ? h.object.userData.i : -1; };
+  renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; });
+  renderer.domElement.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse') return; hov = pick(e); renderer.domElement.style.cursor = hov >= 0 ? 'pointer' : 'grab'; });
+  renderer.domElement.addEventListener('pointerleave', () => { hov = -1; });
+  renderer.domElement.addEventListener('click', e => { if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return; const i = pick(e); if (i >= 0) showInfo(i); else { info.hidden = true; selI = -1; } });
+
+  const v = new THREE.Vector3(), clock = new THREE.Clock();
+  renderer.setAnimationLoop(() => {
+    const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime;
+    anim.forEach(f => f(t, dt));
+    const w = host.clientWidth, h = host.clientHeight;
+    plots.forEach((o, i) => {
+      o.g.position.lerp(o.target, Math.min(1, dt * 6));
+      o.vis += (o.visT - o.vis) * Math.min(1, dt * 6); o.g.scale.setScalar(Math.max(.001, o.vis)); o.g.visible = o.vis > .01;
+      const on = i === hov || i === selI; o.lift += ((on ? .35 : 0) - o.lift) * Math.min(1, dt * 10); o.g.position.y = o.lift;
+      o.sel.material.opacity = i === selI ? .9 : i === hov ? .45 : 0;
+      o.el.classList.toggle('hov', on);
+      v.set(o.g.position.x, 0, o.g.position.z + SIZE / 2 + .3).project(cam);
+      if (!o.g.visible || o.vis < .5 || v.x < -1.1 || v.x > 1.1 || v.y < -1.1 || v.y > 1.1) { o.el.style.display = 'none'; return; }
+      o.el.style.display = ''; o.el.style.left = ((v.x + 1) / 2 * w) + 'px'; o.el.style.top = ((1 - v.y) / 2 * h) + 'px';
+    });
+    controls.update(); renderer.render(scene, cam);
+  });
+
+  return { layout, home, select(i) { selI = i; } };
+}
+</script>
 </body></html>
