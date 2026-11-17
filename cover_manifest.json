@@ -1,0 +1,111 @@
+{
+ "series_ko": "AI를 활용한 시멘트 공정 최적화",
+ "title_ko": "AI를 활용한 시멘트 공정 최적화 — 강좌 안내·목차",
+ "site_title": "AI를 활용한 시멘트 공정 최적화",
+ "site_url": "https://adminmrobo.github.io/AI_for_cement_produce/",
+ "ontology": {
+  "pages": [
+   {
+    "path": "index.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "ch05_explainable_ai_importance/cement_quality.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "ch06_cost_function_optimization/cement_strength_cost.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "ch08_timeseries_lag_preprocessing/process_lag.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "ch09_soft_sensor_validation/soft_sensor.html",
+    "kg": true,
+    "export": true
+   }
+  ],
+  "files": []
+ },
+ "i18n": {
+  "langs": [
+   "ko"
+  ],
+  "pages": {
+   "ko": 10
+  },
+  "readme_langs": [
+   "ko"
+  ]
+ },
+ "languages": [
+  "ko"
+ ],
+ "items": [
+  {
+   "id": "cover_index",
+   "role": "cover",
+   "embedded_in": "index.html",
+   "key": "header#cover .lineup",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "Website top cover illustration, wide 16:9.\nMatch the art style, proportions and colors of the attached reference images exactly\n  (if there are no reference images: 16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights).\nBright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents.\nScene: a bright daytime classroom laboratory on the upper floor of a cement plant; through a wide window behind, tall pale-grey cement silos and a long conveyor stand under a clear blue sky, small and far away; inside, a long white workbench with three small wooden seesaw models in a row, each seesaw balancing a different pair of objects: a small sack of grey powder against a sturdy grey test cube, a tiny blue flame against a glowing clinker pebble, a small rubber tire piece against a stack of tiny cement bags; on the white wall a large concept map made only of circles and connecting lines (no writing), with a single thin green line running across it like a boundary.\nAll four characters together:\n  chibi scientist, thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie, standing at the back center pointing up at the green boundary line on the concept map;\n  girl researcher, long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans, at the right side holding a small blank scoreboard with empty striped rows, smiling;\n  anthropomorphic fruit fly researcher, black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings, small (about 0.41 of the scientist's height), on the left facing right, standing on a stool and leaning toward the first seesaw with a magnifying glass, one eye narrowed, doubtful;\n  boxy beige retro CRT-monitor robot, dark green screen face with mint pixel eyes and mouth, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus, on the right facing left, looking up at the concept map, confident.\nVisual metaphor of the topic: three balanced seesaws (cheaper on one side, quality on the other) and one green boundary line on the wall map — finding the line where saving cost still keeps quality; no numbers anywhere.\nComposition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom); keep the bottom-left corner plain, bright and simple; the light falls on the three seesaws and the green boundary line.\nMood: curious, friendly rivalry, the moment before the result.\nNo text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands, no night, no dark room, no neon glow, no white round robot head, no gold coins, no microscope.",
+   "source_of": null,
+   "status": "redraw"
+  },
+  {
+   "id": "cover_ch08",
+   "role": "cover",
+   "path": "ch08_timeseries_lag_preprocessing/img/COVER.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": null,
+   "status": "ok"
+  },
+  {
+   "id": "cover_ch09",
+   "role": "cover",
+   "path": "ch09_soft_sensor_validation/img/COVER.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": null,
+   "status": "ok"
+  }
+ ],
+ "updated": "2026-11-17"
+}
